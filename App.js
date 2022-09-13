@@ -1,38 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Button from './components/Button'
+import React from 'react';
+import Home from './screens/Home';
+import AboutUs from './screens/AboutUs';
+import Memes from './screens/Memes';
+import SignOut from './screens/SignOut';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Hello World!</Text>
-      <Text style={styles.subtitle}>Sandbox Playground</Text>
-      <Text style={styles.text}>Welcome to my little sandbox playground! It's just a place for testing new features in practice.</Text>
-      <Button title="OK!" />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator initialRouteName='Home'>
+        <Tab.Screen name='Home' component={Home} />
+        <Tab.Screen name='AboutUs' component={AboutUs} />
+        <Tab.Screen name='Memes' component={Memes} />
+        <Tab.Screen name='SignOut' component={SignOut} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#C0C0C0',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 26,
-    lineHeight: 30,
-    fontWeight: 'bold'
-  },
-  subtitle: {
-    fontSize: 22,
-    lineHeight: 26,
-    fontStyle: 'italic'
-  },
-  text: {
-    fontSize: 14,
-    lineHeight: 16,
-  }
-});
