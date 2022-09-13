@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import Button from './components/Button'
 
 export default function App() {
   return (
@@ -7,7 +8,7 @@ export default function App() {
       <Text style={styles.title}>Hello World!</Text>
       <Text style={styles.subtitle}>Sandbox Playground</Text>
       <Text style={styles.text}>Welcome to my little sandbox playground! It's just a place for testing new features in practice.</Text>
-      <Button title="OK!" color="black" />
+      <Button title="OK!" />
       <StatusBar style="auto" />
     </View>
   );
@@ -33,9 +34,5 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 14,
     lineHeight: 16,
-  },
-  button: {
-  borderColor: '#C0C0C0',
-  borderWidth: 5,
   }
 });
