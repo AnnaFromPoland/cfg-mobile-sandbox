@@ -17,6 +17,8 @@ export default function BottomNavBar() {
       <Tab.Navigator initialRouteName='Home' screenOptions={{
         tabBarActiveTintColor: '#EE6983',
         tabBarInactiveTintColor: '#850E35',
+        tabBarInactiveBackgroundColor: '#FFF5E4',
+        tabBarActiveBackgroundColor: '#FFF5E4',
         tabBarStyle: {position: 'absolute'},
         tabBarBackground: () => (<BlurView tint='light' intensity={100} style={StyleSheet.absoluteFill} />)
       }}>

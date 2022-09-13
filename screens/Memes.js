@@ -19,7 +19,7 @@ export default function Memes() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#C0C0C0',
+    backgroundColor: '#FFC4C4',
     alignItems: 'center',
     justifyContent: 'center'
   },
