@@ -5,6 +5,10 @@ export default function Memes() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>4 Best Procrastination Memes</Text>
+      <Image source={require('./assets/images/phd071307s.gif')} />
+      <Image source={require('./assets/images/phd073010s.gif')} />
+      <Image source={require('./assets/images/phd092910s.gif')} />
+      <Image source={require('./assets/images/sarah_anderson.jpg')} />
       <StatusBar style="auto" />
     </View>
   );
