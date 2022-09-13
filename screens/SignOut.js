@@ -5,9 +5,9 @@ import Button from '../components/Button'
 export default function SingOut() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Sign SingOut</Text>
+      <Text style={styles.title}>Sign Out</Text>
       <Text style={styles.subtitle}>Leaving already?</Text>
-      <Text style={styles.text}>Some sayonara content should go here. Did you know there's a Jeff Goldblum Lorem Ipsum Generator? Click below to see <b>Jeffsum</b> with your own eyes!</Text>
+      <Text style={styles.text}>Some sayonara content should go here. Did you know there's a Jeff Goldblum Lorem Ipsum Generator? Click below to see Jeffsum with your own eyes!</Text>
       <Text style={styles.subtitle}>Have a nice trip~~!</Text>
       <Button title="Take me to Jeff'sum" href="https://jeffsum.com" target="_blank" />
       <StatusBar style="auto" />
