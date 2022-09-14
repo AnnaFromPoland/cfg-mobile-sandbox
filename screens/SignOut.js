@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Button from '../components/Button'
+import { StyleSheet, Text, View, Linking, TouchableOpacity } from 'react-native';
 
 export default function SingOut() {
   return (
@@ -9,7 +8,9 @@ export default function SingOut() {
       <Text style={styles.subtitle}>Leaving already?</Text>
       <Text style={styles.text}>Some sayonara content should go here. Did you know there's a Jeff Goldblum Lorem Ipsum Generator? Click below to see Jeffsum with your own eyes!</Text>
       <Text style={styles.subtitle}>Have a nice trip~~!</Text>
-      <Button title="Take me to Jeff'sum" href="https://jeffsum.com" target="_blank" />
+      <TouchableOpacity style={styles.button} onPress={() => Linking.openURL('https://jeffsum.com')}>
+        <Text style={styles.buttontext}>Take me to Jeffsum!</Text>
+      </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
@@ -35,5 +36,22 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 14,
     lineHeight: 16,
+  },
+  button: {
+        alighItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 32,
+        borderRadius: 4,
+        elevation: 3,
+        backgroundColor: 'black',
+        margin: 5,
+        marginBottom: 5
+  },
+  buttontext: {
+    fontSize: 16,
+    lineHeight: 22,
+    fontWeight: 'bold',
+    color: 'white'
   }
 });
